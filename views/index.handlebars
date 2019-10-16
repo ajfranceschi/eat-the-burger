@@ -1,11 +1,24 @@
 <div class="mainContainer">
     <span class="burgerImage">🍔</span>
     <h1 class="pageTitle">Eat 'da Burger</h1>
+
+    <div class="burgersToEat">
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/burgers_block}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+
+
     <p>Enter the burger you'd like to eat</p>
     <input
             type="text"
             id="burgerTxtField"
     />
-    <button type="button" id="eatItBtn" class="submitButton">Eat it!</button>
+    <button type="button" class='button' id="submitBtn">Submit</button>
 
 </div>
