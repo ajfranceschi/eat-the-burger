@@ -2,14 +2,25 @@
     <span class="burgerImage">🍔</span>
     <h1 class="pageTitle">Eat 'da Burger</h1>
 
-    <div class="burgersToEat">
-        <ul>
-            {{#each burgers}}
-                {{#unless devoured}}
-                    {{> burgers/burgers_block}}
-                {{/unless}}
-            {{/each}}
-        </ul>
+    <div class="burgers">
+        <div class="burgersToEat">
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burgers_block devoured=true hidden=false}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="devouredBurgers">
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burgers_block hidden='hidden'}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 
 
