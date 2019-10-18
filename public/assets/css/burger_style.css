@@ -42,7 +42,7 @@ body {
 }
 
 button {
-
+    border: none;
     border-radius: 10px;
     color: white;
 }
@@ -103,12 +103,48 @@ button {
     font-family: 'Eater', cursive;
     font-size: 1rem;
     background-color: goldenrod;
+    margin-left: 10px;
+}
+.buttonsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#clearDatabase {
+    background-color: #573815
 }
 
 
 
-@media only screen and (max-width: 648px) {
+@media only screen and (max-width: 450px) {
+    .burgers {
+        width: 100vw;
+    }
+
+    .burgersToEat,
     .devouredBurgers {
+        width: 50vw;
+    }
+
+    .devouredBurgers li {
         justify-content: flex-end;
+        width: 100%;
+        font-size: 0.7rem;
+        margin-left: 10px;
+    }
+
+    .burgersToEat li {
+        display: flex;
+        justify-content: flex-start;
+        width: 50vw;
+        padding-left: 25px;
+
+    }
+
+    .devourButtons {
+        position: absolute;
+        left: 135px;
+        font-size: 14px;
     }
 }
