@@ -3,15 +3,10 @@ const dotenv = require('dotenv').config();
 const env = process.env.NODE_ENV || "development";
 const config = require('./config')[env];
 
+
 let connection;
 if (env === "production") {
-  connection = mysql.createConnection({
-    host: config.host,
-    port: config.port,
-    user: config.username,
-    password: config.password,
-    database: config.database
-  })
+  connection = mysql.createConnection(process.env[use_env_variable])
  ;
 }
 console.log(config);
