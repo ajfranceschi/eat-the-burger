@@ -1,6 +1,6 @@
 const orm = require("../config/orm");
 
-module.exports = {
+const burger = {
   selectAll: callBack => {
     orm.selectAll("burgers", response => {
       callBack(response);
@@ -22,3 +22,5 @@ module.exports = {
     });
   }
 };
+
+module.exports = burger;
