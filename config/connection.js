@@ -5,7 +5,14 @@ const config = require('./config')[env];
 
 let connection;
 if (env === "production") {
-  connection = mysql.createConnection(config);
+  connection = mysql.createConnection({
+    host: config.host,
+    port: config.port,
+    user: config.username,
+    password: config.password,
+    database: config.database
+  })
+ ;
 }
 
 if (env === "development") {
