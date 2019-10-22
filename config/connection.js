@@ -6,7 +6,7 @@ const config = require('./config')[env];
 
 let connection;
 if (env === "production") {
-  connection = mysql.createConnection(process.env[use_env_variable])
+  connection = mysql.createConnection(process.env[config.use_env_variable])
  ;
 }
 console.log(config);
