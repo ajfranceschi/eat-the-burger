@@ -14,6 +14,7 @@ if (env === "production") {
   })
  ;
 }
+console.log(config);
 
 if (env === "development") {
   connection = mysql.createConnection({
