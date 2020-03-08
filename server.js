@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const router = require('./controllers/burgers_controller');
-const dotenv = require("dotenv");
+const dotenv = require("dotenv").config();
 
 const PORT = process.env.PORT || 3005;
 
