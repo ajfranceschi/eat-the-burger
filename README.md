@@ -7,6 +7,7 @@ Eat The Burger is a Full Stack Application using Handlebars, ExpressJS, MySQL in
 [Live Demo](https://eat-da-burger-hdlbrs-xprs-sql.herokuapp.com/) 
 
 Technologies Used:
+--
 * HTML
 * CSS
 * JavaScript
